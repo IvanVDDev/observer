@@ -1,0 +1,129 @@
+.container {
+  position: relative;
+}
+
+.container .card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container .card-wrapper .blog-card {
+  width: 22%;
+  box-sizing: border-box;
+  border: 1px solid red;
+  padding: 20px;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.container .card-wrapper .blog-card:not(:nth-of-type(4n + 4)) {
+  margin-right: 4%;
+}
+
+.container .card-wrapper .blog-card h2 {
+  font-size: 24px;
+  color: cyan;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.container .card-wrapper .blog-card p {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container .card-wrapper .blog-card .editable {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 9px;
+}
+
+.container .card-wrapper .blog-card .editable:focus {
+  border: 1px solid black;
+}
+
+.container .card-wrapper .blog-card .apply {
+  display: none;
+}
+
+.container .card-wrapper .blog-card .edited {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  background-color: gray;
+  color: black;
+  padding: 5px;
+  display: none;
+  border-radius: 5px;
+}
+
+.container .action-popup {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  margin: 10px;
+  background-color: red;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: white;
+  padding: 10px;
+}
+
+.container .action-popup p {
+  color: cornsilk;
+}
+
+.container .sidebar {
+  width: 25%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: calc(-25% - 40px);
+  background-color: #1f50ac;
+  padding: 20px;
+  -webkit-animation: all 0.5s ease-in-out;
+          animation: all 0.5s ease-in-out;
+}
+
+.container .sidebar.show {
+  left: 0;
+}
+
+.container .user-card {
+  width: 100%;
+  min-height: 200px;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.container .user-card h3 {
+  display: flex;
+  align-items: center;
+}
+
+.container .user-card h3 span {
+  border-radius: 20%;
+  display: inline-block;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.container .user-card h3 span img {
+  width: 50px;
+}
+
+.container .user-card p .last-seen {
+  color: seagreen;
+}
+
